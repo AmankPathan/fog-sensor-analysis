@@ -1,0 +1,16 @@
+# Ignore the raw data folder
+/data/
+
+# Ignore Python cache and virtual environment
+__pycache__/
+*.pyc
+.env
+venv/
+env/
+
+# Ignore IDE settings (if any)
+.vscode/
+.idea/
+
+# Optionally ignore output figures
+/figures/
