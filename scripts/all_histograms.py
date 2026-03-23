@@ -51,3 +51,12 @@ if __name__ == "__main__":
 
     print("\nAll histograms built successfully.")
     # Optional: save the histograms to a file for later use (we'll do that later)
+
+    # Save histograms to a compressed numpy file
+    save_dict = {}
+    for sensor in sensors:
+        for condition in conditions:
+            key = f"{sensor}_{condition}"
+            save_dict[key] = histograms[sensor][condition]
+    np.savez_compressed('histograms.npz', **save_dict)
+    print("Histograms saved to histograms.npz")
