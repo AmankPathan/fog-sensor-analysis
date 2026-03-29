@@ -13,4 +13,3 @@ env/
 .idea/
 
 # Optionally ignore output figures
-/figures/
