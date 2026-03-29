@@ -25,7 +25,7 @@ for sensor in sensors:
     plt.title(f'{sensor.capitalize()} – Clear vs Fog', fontsize=14)
     plt.legend()
     plt.grid(True, alpha=0.3)
-    plt.xlim(0, 100)
+    plt.xlim(0, 60)
 
     # Save Figure
     plt.savefig(f'../figures/{sensor}_histogram.png', dpi=150, bbox_inches='tight')
