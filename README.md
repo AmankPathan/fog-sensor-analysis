@@ -21,6 +21,7 @@ For each sensor, histograms of point distances were generated (0–60 m range,
 ### Radar (MMWAVCAS‑RF‑EVM)
 - **Clear vs Fog**: Histograms are nearly identical; minor differences are within natural scene variation.
 - **Conclusion**: Fog has **no measurable influence** on radar measurements. This is expected due to the longer wavelength (mm‑wave) which penetrates fog particles with negligible scattering/attenuation.
+![Radar histogram](figures/radar_histogram.png)
 
 ### Velodyne Puck (LIDAR)
 - **Clear**: Wide distribution of points up to ~100 m, reflecting typical outdoor ranging.
@@ -29,6 +30,7 @@ For each sensor, histograms of point distances were generated (0–60 m range,
   - Almost no detections beyond 25 m.
   - Some range bins show missing points entirely – consistent with the PDF’s observation of “missing scan lines”.
 - **Conclusion**: Fog severely degrades Velodyne’s performance. The 905 nm laser is strongly attenuated and scattered by water droplets, making long‑range detection impossible. The rotating mechanism may also introduce blind zones due to uneven fog density.
+![Velodyne histogram](figures/velodyne_histogram.png)
 
 ### Blickfeld Cube 1 (LIDAR)
 - **Clear**: Typical LIDAR distribution with good range up to ~60 m.
@@ -36,6 +38,7 @@ For each sensor, histograms of point distances were generated (0–60 m range,
   - **Increased counts at close range (0–10 m)** – attributed to backscatter from fog particles directly in front of the sensor (false positives).
   - Reduced counts beyond 20 m, though not as drastic as Velodyne.
 - **Conclusion**: Fog affects Blickfeld mainly by creating near‑field noise and reducing far‑field sensitivity. Its solid‑state design may be less prone to missing entire scan lines, but backscatter remains a challenge.
+![Blickfeld histogram](figures/blickfeld_histogram.png)
 
 ## Summary Table
 
